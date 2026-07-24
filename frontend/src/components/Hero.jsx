@@ -14,32 +14,32 @@ function Hero() {
         <div className="hero-copy">
           <span className="eyebrow">
             <FaHardHat />
-            General Construction, Water & Sanitation
+            Construction, Water, Sanitation & Hygiene
           </span>
 
           <h1>
-            Building Strong Foundations for a Better Tomorrow
+            Building Infrastructure That Delivers Clean Water, and 
+            Safe Sanitation, and Healthier Communities
           </h1>
 
           <p>
-            Blessed Hands provides dependable construction,
-            engineering, water supply, and sanitation solutions
-            designed to improve lives and strengthen communities.
+            Blessed Hands General Construction, Water & Sanitation
+            Company is a newly established Liberian company delivering
+            professional construction, clean-water, sanitation, hygiene,
+            and community infrastructure solutions.
           </p>
 
           <div className="hero-actions">
-            <Link
-              to="/services"
-              className="button button-primary"
-            >
+            <Link to="/services" className="button button-primary">
               Explore Our Services
               <FaArrowRight />
             </Link>
 
-            <Link
-              to="/quote"
-              className="button button-outline-light"
-            >
+            <Link to="/wash" className="button button-outline-light">
+              Explore WASH Solutions
+            </Link>
+
+            <Link to="/quote" className="button button-outline-light">
               Request a Quote
             </Link>
           </div>
@@ -47,17 +47,17 @@ function Hero() {
           <div className="hero-highlights">
             <span>
               <FaCheckCircle />
-              Quality Workmanship
+              Quality-Focused Delivery
             </span>
 
             <span>
               <FaCheckCircle />
-              Professional Team
+              Sustainable WASH Solutions
             </span>
 
             <span>
               <FaCheckCircle />
-              Sustainable Solutions
+              Ready for Partnerships
             </span>
           </div>
         </div>

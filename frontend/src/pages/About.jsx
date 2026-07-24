@@ -1,4 +1,22 @@
-import { FaBullseye, FaEye, FaHandshake } from "react-icons/fa";
+import {
+  FaBullseye,
+  FaEye,
+  FaHandshake,
+  FaLeaf,
+  FaShieldAlt,
+  FaUsers,
+} from "react-icons/fa";
+
+const values = [
+  "Integrity",
+  "Quality",
+  "Safety",
+  "Accountability",
+  "Sustainability",
+  "Innovation",
+  "Community Service",
+  "Inclusion",
+];
 
 function About() {
   return (
@@ -10,10 +28,9 @@ function About() {
           <h1>About Blessed Hands</h1>
 
           <p>
-            Blessed Hands General Construction, Water & Sanitation
-            Company is committed to delivering quality infrastructure,
-            engineering, water, and sanitation services that improve
-            communities and strengthen development across Liberia.
+            A newly established Liberian company committed to delivering
+            professional construction, water, sanitation, hygiene, and
+            community infrastructure solutions.
           </p>
         </div>
       </section>
@@ -21,85 +38,124 @@ function About() {
       <section className="section">
         <div className="container two-column">
           <div>
-            <h2>Our Story</h2>
+            <span className="section-eyebrow">Our Company</span>
+
+            <h2>A New Company with a Clear Purpose</h2>
 
             <p>
-              Blessed Hands was established with the vision of becoming
-              one of Liberia's leading construction and infrastructure
-              companies. Through dedication, professionalism, and
-              innovation, we provide dependable services to both public
-              and private institutions.
+              Blessed Hands General Construction, Water & Sanitation
+              Company was established to respond to the growing need for
+              safe buildings, clean water, improved sanitation, proper
+              hygiene facilities, and sustainable infrastructure in
+              Liberia.
             </p>
 
             <p>
-              Our expertise covers building construction, water supply
-              systems, sanitation projects, engineering services, and
-              equipment deployment.
+              As a newly established company, we are focused on building
+              trust through professional planning, quality workmanship,
+              transparency, safety, and responsible service delivery.
+            </p>
+
+            <p>
+              We serve communities, private clients, schools, healthcare
+              facilities, businesses, NGOs, government institutions, and
+              development partners.
             </p>
           </div>
 
           <div className="about-image-placeholder">
-            Blessed Hands
+            <div className="about-company-card">
+              <img
+                src="/logo.jpeg"
+                alt="Blessed Hands company logo"
+              />
+
+              <h3>Blessed Hands</h3>
+
+              <p>
+                General Construction, Water, Sanitation and WASH
+                Solutions
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="section section-muted">
         <div className="container values-grid">
-
-          <div className="value-card">
+          <article className="value-card">
             <FaBullseye />
 
-            <h3>Mission</h3>
+            <h3>Our Mission</h3>
 
             <p>
-              To provide reliable, innovative, and sustainable
-              construction, water, and sanitation solutions that improve
-              lives and create lasting value.
+              To provide quality construction and sustainable WASH
+              solutions that improve health, dignity, safety, and
+              community development.
             </p>
-          </div>
+          </article>
 
-          <div className="value-card">
+          <article className="value-card">
             <FaEye />
 
-            <h3>Vision</h3>
+            <h3>Our Vision</h3>
 
             <p>
-              To become the leading construction and infrastructure
-              company in Liberia and West Africa.
+              To become a trusted Liberian construction and WASH company
+              recognized for professionalism, integrity, innovation, and
+              positive community impact.
             </p>
-          </div>
+          </article>
 
-          <div className="value-card">
+          <article className="value-card">
             <FaHandshake />
 
-            <h3>Core Values</h3>
+            <h3>Our Commitment</h3>
 
             <p>
-              Integrity, Quality, Safety, Accountability, Innovation,
-              and Community Service.
+              To work responsibly with clients, communities, government,
+              NGOs, suppliers, and development partners.
             </p>
-          </div>
-
+          </article>
         </div>
       </section>
 
       <section className="section">
         <div className="container">
-          <h2>Why Clients Choose Us</h2>
+          <div className="section-heading centered">
+            <span className="section-eyebrow">What Guides Us</span>
+            <h2>Our Core Values</h2>
+          </div>
 
-          <ul className="about-list">
-            <li>Experienced professionals</li>
-            <li>Commitment to safety standards</li>
-            <li>Timely project delivery</li>
-            <li>Quality workmanship</li>
-            <li>Competitive pricing</li>
-            <li>Community-focused development</li>
-          </ul>
+          <div className="core-values-grid">
+            {values.map((value, index) => {
+              const icons = [
+                <FaShieldAlt />,
+                <FaHardHatIcon />,
+                <FaUsers />,
+                <FaHandshake />,
+                <FaLeaf />,
+                <FaBullseye />,
+                <FaUsers />,
+                <FaHandshake />,
+              ];
+
+              return (
+                <article key={value} className="core-value-item">
+                  <div>{icons[index]}</div>
+                  <span>{value}</span>
+                </article>
+              );
+            })}
+          </div>
         </div>
       </section>
     </main>
   );
+}
+
+function FaHardHatIcon() {
+  return <span aria-hidden="true">🏗️</span>;
 }
 
 export default About;

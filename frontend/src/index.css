@@ -420,17 +420,78 @@ h4 {
     line-height:2;
 }
 
-.contact-form{
-    display:grid;
-    gap:20px;
-    max-width:700px;
+.contact-form {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  max-width: 760px;
+  margin-inline: auto;
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow-small);
 }
 
 .contact-form input,
-.contact-form textarea{
-    padding:15px;
-    border:1px solid #ddd;
-    border-radius:8px;
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px 16px;
+  border: 1px solid #d9e0e7;
+  border-radius: 8px;
+  color: var(--dark);
+  background: var(--white);
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(21, 120, 201, 0.12);
+}
+
+.contact-form textarea {
+  min-height: 170px;
+  resize: vertical;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+  color: var(--dark-soft);
+  font-weight: 700;
+}
+
+.contact-form button {
+  justify-self: start;
+  cursor: pointer;
+}
+
+.contact-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+  transform: none;
+}
+
+.form-message {
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.success-message {
+  color: #176b42;
+  background: #e8f8ef;
+}
+
+.error-message {
+  color: #a12626;
+  background: #fdecec;
 }
 
 
@@ -1058,4 +1119,201 @@ h4 {
   .footer-bottom-content {
     text-align: center;
   }
+  .two-column,
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero {
+    padding: 88px 0;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2.4rem, 9vw, 3.5rem);
+  }
+
+  .contact-form {
+    padding: 22px;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+
+.about-company-card {
+  max-width: 380px;
+  padding: 28px;
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow-small);
+  text-align: center;
+}
+
+.about-company-card img {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 18px;
+  object-fit: contain;
+}
+
+.about-company-card h3 {
+  margin-bottom: 8px;
+  font-size: 1.8rem;
+}
+
+.about-company-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.core-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.core-value-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-small);
+  background: var(--white);
+  box-shadow: var(--shadow-small);
+  font-weight: 750;
+}
+
+.core-value-item div {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 10px;
+  color: var(--primary);
+  background: #eaf5ff;
+  font-size: 1.35rem;
+}
+
+.wash-page-hero {
+  background:
+    linear-gradient(
+      rgba(13, 79, 136, 0.94),
+      rgba(13, 79, 136, 0.94)
+    ),
+    url("https://images.unsplash.com/photo-1541971875076-8f970d573be6?auto=format&fit=crop&w=1800&q=85")
+      center/cover;
+}
+
+.wash-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.wash-card {
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow-small);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.wash-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.wash-card-icon {
+  display: grid;
+  width: 62px;
+  height: 62px;
+  margin-bottom: 20px;
+  place-items: center;
+  border-radius: 15px;
+  color: var(--primary-dark);
+  background: #dff3ff;
+  font-size: 1.8rem;
+}
+
+.wash-card h3 {
+  margin-bottom: 12px;
+}
+
+.wash-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.wash-list {
+  display: grid;
+  gap: 12px;
+  padding-left: 20px;
+}
+
+.wash-list li::marker {
+  color: var(--primary);
+}
+
+.wash-partnership-card {
+  padding: 40px;
+  border-radius: var(--radius);
+  color: var(--white);
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary-dark),
+      var(--primary)
+    );
+  box-shadow: var(--shadow);
+}
+
+.wash-partnership-card h2 {
+  color: var(--white);
+}
+
+.wash-partnership-card p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.wash-partnership-card .section-eyebrow {
+  color: #ffe49a;
+}
+
+.wash-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+@media (max-width: 1100px) {
+  .core-values-grid,
+  .wash-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .core-values-grid,
+  .wash-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wash-partnership-card {
+    padding: 28px 22px;
+  }
+
+  .wash-actions {
+    flex-direction: column;
+  }
+
+  .wash-actions .button {
+    width: 100%;
+  }
+}
+
 }

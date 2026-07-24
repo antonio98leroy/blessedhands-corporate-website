@@ -15,6 +15,7 @@ import ProjectsPage from "./pages/ProjectsPage";
 import Quote from "./pages/Quote";
 import ServicesPage from "./pages/ServicesPage";
 import Team from "./pages/Team";
+import Wash from "./pages/Wash";
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
           path="/services/:slug"
           element={<PlaceholderPage title="Service Details" />}
         />
+
+        <Route path="/wash" element={<Wash />} />
 
         <Route path="/projects" element={<ProjectsPage />} />
         <Route
